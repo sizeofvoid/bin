@@ -1,0 +1,12 @@
+#!/bin/sh
+
+ping -c 1 google.de 1> /dev/null
+if [ $? = "0" ]; then
+	$1
+	#exec $1
+	echo 'ON-line'
+	exit 0
+else
+	echo 'OFF-line'
+	exit 1
+fi

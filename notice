@@ -1,0 +1,11 @@
+#!/bin/sh
+
+VIM_BIN='/usr/bin/vim'
+SAVEDIR='/home/zyon/docs'
+DATE=$(date +%d_%m_%Y_%k%M)
+
+if [ $# -eq 0 ]; then
+	$VIM_BIN "$SAVEDIR/notice_$DATE"
+else
+	$VIM_BIN "$SAVEDIR/notice_$1_$DATE"
+fi
